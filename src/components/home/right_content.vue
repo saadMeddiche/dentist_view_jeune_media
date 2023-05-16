@@ -17,9 +17,21 @@
             allant de la prévention à la restauration. Nous disposons également d'équipements modernes 
             et de technologies avancées pour garantir des soins efficaces et confortables.</h5>
         </div>
-        
+        <email_field></email_field>
     </div>
 </template>
+
+<script>
+    import email_field from '@/components/home/email.vue'
+
+    export default{
+        components:{
+            email_field
+        }
+    }
+       
+   
+</script>
 
 <style lang="scss" scoped>
     .content{
@@ -52,7 +64,7 @@
         .description{
             width: 70%;
             font-style: normal;
-            font-size: 14px;
+            font-size: 1em;
             line-height: 16px;
             color: #FFFFFF;
         }

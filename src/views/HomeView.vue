@@ -22,12 +22,12 @@
 
 <script>
   import tape from '@/components/tape.vue'
-  import right_content from '@/components/home/right_content.vue';
+  import right_content from '@/components/home/right_content.vue'
 
   export default {
     components:{
       tape,
-      right_content
+      right_content,
     }
   }
 </script>
@@ -57,12 +57,13 @@
       /* Styles for the title side */
       .title{
         margin: 10px;
+        width: 300px;
       }
     }
 
     /* Styles for the right side */
     .right-side {
-      display: flex;
+      display: flex;      
       justify-content: center;
       align-items: center;
       position: relative;
