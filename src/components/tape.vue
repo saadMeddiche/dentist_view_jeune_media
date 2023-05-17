@@ -7,16 +7,20 @@
             <!-- First part of the tape -->
             <div class="first_part">
                 <!-- Headline with style_1 -->
+                <div class="circle_1"></div>
                 <h1 class="style_1">Notre site web officiel sera en ligne très bientôt!</h1>
                 <!-- Headline with style_2 -->
+                <div class="circle_2"></div>
                 <h1 class="style_2">Ouverture du cabinet Février 2023.</h1>
             </div>
 
             <!-- Second part of the tape -->
             <div class="second_part">
                 <!-- Headline with style_1 -->
+                <div class="circle_1"></div>
                 <h1 class="style_1">Notre site web officiel sera en ligne très bientôt!</h1>
                 <!-- Headline with style_2 -->
+                <div class="circle_2"></div>
                 <h1 class="style_2">Ouverture du cabinet Février 2023.</h1>
             </div>
 
@@ -55,6 +59,7 @@
         .first_part , .second_part{
             display: flex;
             justify-content: space-around;
+            align-items: center;
             width: 50%;
             height: 100%;
         }
@@ -69,5 +74,20 @@
 /* Styling for class style_2 */
 .style_2 {
     color: #b6b388;
+}
+
+/* Styling for the black circle */
+.circle_1 , .circle_2 {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+.circle_1{
+    background-color: #193c35;
+}
+
+.circle_2{
+    background-color: #b6b388;
 }
 </style>
