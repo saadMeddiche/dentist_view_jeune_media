@@ -1,5 +1,7 @@
 import emailjs from "emailjs-com"
 import axios from "axios";
+import store from '@/store/index'
+
 
 // Function to send email using EmailJs
 export async function send_message(email, message) {
@@ -26,15 +28,15 @@ export async function verify_email(email) {
         const { status } = response.data;
         
         if (status === 'valid') {
-            alert('The email do exist');
-           return 'valid';
+            store.commit('show_modal' , 'The message has been sent successfuly ! (It can take up to 5min to recieve it)')
+            return 'valid';
         }
       
         if (status === 'invalid') {
-            alert('The email does not exist');
+            store.commit('show_modal' , 'The email does not exist')
             return 'invalid';
         } else {
-            alert('Unknown error');
+            store.commit('show_modal' , 'Error verifying email')
             return 'unknown';
         }
         
@@ -49,13 +51,13 @@ export async function verify_email(email) {
 // Function to validate email format
 export function validate_email(email){
     if(email == '' || email == null){
-        alert('The email field is empty');
+        store.commit('show_modal' , 'The email field is empty')
         return 'empty';
     }
 
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailRegex.test(email)) {
-        alert('The form of email is invalid');
+        store.commit('show_modal' , 'The form of email is invalid')
         return 'invalid';
     }
     

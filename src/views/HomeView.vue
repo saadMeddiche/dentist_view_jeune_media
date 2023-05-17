@@ -1,4 +1,5 @@
 <template>
+  <modal></modal>
   <div class="Home">
     <!-- The main body section -->
     <div class="body">
@@ -11,7 +12,6 @@
       <div class="right-side">
         <right_content></right_content>
       </div>
-        
     </div>
 
     <!-- Custom tape component -->
@@ -23,11 +23,12 @@
 <script>
   import tape from '@/components/home/tape.vue'
   import right_content from '@/components/home/right_content.vue'
-
+  import modal from '@/components/modal.vue';
   export default {
     components:{
       tape,
       right_content,
+      modal
     }
   }
 </script>
