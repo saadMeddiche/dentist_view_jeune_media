@@ -3,7 +3,6 @@
         <div class="description">
           <p>Vous souhaitez être tenu(e) au courant de l’ouverture du cabinet?</p>
         </div>
-        <form ref="form" @submit.prevent="when_send_button_is_clicked">
           <div class="input_holder">
               <input type="text" placeholder="Votre adresse mail" v-model="email">
               <button @click="when_send_button_is_clicked()">
@@ -26,11 +25,10 @@
                   </div>
               </button>
           </div>
-        </form>
     </div>
 </template>
 <script>
-  import {send_message , clear_email_field} from '@/utils/Email'
+  import {send_message , clear_email_field, verify_email , validate_email} from '@/utils/Email'
 
   export default{
     data(){
@@ -39,8 +37,22 @@
       }
     },
     methods:{
-      when_send_button_is_clicked(){
+      async when_send_button_is_clicked(){
+
+        // Validate the format of email
+        if(validate_email(this.email) != 'verified'){
+          return;
+        }
+
+        // Verify if the email is realy exist ot not
+        if(await verify_email(this.email) != 'valid'){
+          return;
+        }
+
+        // Send Message to that eamil
         send_message(this.email , 'You Will Be Notified When The Dentist Is Open :)')
+
+        // Clear The field Of Email
         clear_email_field(this)
       }
     }
