@@ -21,7 +21,7 @@
 
 
 <script>
-  import tape from '@/components/tape.vue'
+  import tape from '@/components/home/tape.vue'
   import right_content from '@/components/home/right_content.vue'
 
   export default {
