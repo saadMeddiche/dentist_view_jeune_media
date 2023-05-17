@@ -76,7 +76,7 @@
     color: #b6b388;
 }
 
-/* Styling for the black circle */
+/* Styling for the circles */
 .circle_1 , .circle_2 {
     width: 16px;
     height: 16px;
