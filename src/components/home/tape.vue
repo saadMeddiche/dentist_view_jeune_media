@@ -33,7 +33,7 @@
 .tape_container {
     position: relative;
     width: 100%;
-    height: 10vh;
+    height: 8vh;
     overflow: hidden;
     background-color: #F3F6E8;
 
@@ -60,6 +60,7 @@
         .first_part , .second_part{
             display: flex;
             justify-content: space-around;
+            gap: 10px;
             align-items: center;
             width: 50%;
             height: 100%;
@@ -98,7 +99,7 @@
     /* Small screens (sm) */
   
     .style_1 , .style_2 {
-        font-size: 0.6rem;
+        font-size: 30%;
     }
 
     .circle_1 , .circle_2 {
@@ -126,7 +127,7 @@
     /* Large screens (lg) */
    
     .style_1, .style_2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
 }

@@ -39,6 +39,7 @@
 <style lang="scss" scoped>
 /* Styling for the component */
 .Home {
+  width: 100vw;
   /* Make the component a flex container with a vertical layout */
   display: flex;
   flex-direction: column;
@@ -72,7 +73,7 @@
       background-color: #F3F6E8;
       background-size: 90% 100%;
       background-repeat: no-repeat; 
-      height: 80vh; 
+      height: 82vh; 
 
       
     }
@@ -89,7 +90,7 @@
       background-image: url("../assets/img/right_side.png");
       background-size: 100% 100%;
       background-repeat: no-repeat; 
-      height: 80vh; 
+      height: 82vh; 
 
     }
 

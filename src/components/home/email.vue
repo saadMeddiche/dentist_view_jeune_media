@@ -119,6 +119,64 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  /* Small screens (sm) */
+  .Email {
+    width: 100%;
+  .description{
+    width: 100%;
+  }
+  .input_holder {
+    button {
+      padding: 10px;
+      background-color: #f3f6e8;
+      border-radius: 0 25px 25px 0;
+      border: none;
+
+  
+      div {
+        padding: 10px;
+        border-radius: 25px;
+        background-color: rgba(25, 60, 53, 0.9);
+        cursor: pointer;
+        height: 100%;
+        
+
+        svg {
+            top: 50%;
+            right: 50%;
+            bottom: 50%;
+            left: 50%;
+            width: 20px;
+            // height: 20px;
+
+        }
+      }
+    }
+
+    input {
+      width: 60%;
+      padding: 20px;
+      background-color: #f3f6e8;
+      border-radius: 25px 0 0 25px;
+      border: none;
+
+      &::placeholder {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 16px;
+        color: rgba(25, 60, 53, 0.9);
+      }
+
+    }
+  }
+}
+
+  
+}
 </style>
 
 

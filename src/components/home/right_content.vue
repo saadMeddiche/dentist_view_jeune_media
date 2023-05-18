@@ -73,7 +73,7 @@
 @media (max-width: 768px) {
   /* Small screens (sm) */
   .content{
-
+    width: 80%;
     
 
         .big_title{
