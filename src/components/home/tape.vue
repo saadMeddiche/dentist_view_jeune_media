@@ -102,7 +102,7 @@
     /* Small screens (sm) */
   
     .style_1 , .style_2 {
-        font-size: 0.4rem;
+        font-size: 0.5rem;
     }
 
     .circle_1 , .circle_2 {

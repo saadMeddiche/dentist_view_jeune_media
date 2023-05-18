@@ -83,7 +83,7 @@
     align-items: flex-end;
     justify-content: space-around;
     z-index: 2;
-    transform: translateX(100%);
+    // transform: translateX(100%);
     background-color: #B6B388;
     border: 2px solid white;
     border-radius: 5px;
@@ -114,7 +114,7 @@
   }
   
   .show-menu {
-    transform: translateX(0%);
+    // transform: translateX(0%);
     opacity: 1;
     pointer-events: all;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
