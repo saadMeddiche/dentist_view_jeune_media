@@ -20,6 +20,7 @@
     <!-- Custom tape component -->
     <tape></tape>
   </div>
+  <info_popup></info_popup>
 </template>
 
 
@@ -27,11 +28,13 @@
   import tape from '@/components/home/tape.vue'
   import right_content from '@/components/home/right_content.vue'
   import modal from '@/components/modal.vue';
+  import info_popup from '@/components/info_popup.vue';
   export default {
     components:{
       tape,
       right_content,
-      modal
+      modal,
+      info_popup
     }
   }
 </script>
