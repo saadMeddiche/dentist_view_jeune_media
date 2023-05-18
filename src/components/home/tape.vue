@@ -90,4 +90,43 @@
 .circle_2{
     background-color: #b6b388;
 }
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    /* Small screens (sm) */
+  
+    .style_1 , .style_2 {
+        font-size: 0.6rem;
+    }
+
+    .circle_1 , .circle_2 {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Medium screens (md) */
+
+
+    .style_1 , .style_2 {
+        font-size: 1rem;
+    }
+
+    .circle_1 , .circle_2 {
+        width: 10px;
+        height: 10px;
+    }
+   
+}
+
+@media (min-width: 1025px) {
+    /* Large screens (lg) */
+   
+    .style_1, .style_2 {
+        font-size: 2rem;
+    }
+
+}
 </style>
