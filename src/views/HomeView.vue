@@ -53,7 +53,10 @@
       flex: 1;
       /* Set a background image for the left side */
       background-image: url("../assets/img/left_side.png");
-      background-size: cover;
+      background-color: #F3F6E8;
+      background-size: 90% 100%;
+      background-repeat: no-repeat; 
+      height: 90vh; 
 
       /* Styles for the title side */
       .title{
@@ -72,7 +75,10 @@
       flex: 1;
       /* Set a background image for the right side */
       background-image: url("../assets/img/right_side.png");
-      background-size: cover;
+      background-size: 100% 100%;
+      background-repeat: no-repeat; 
+      height: 90vh; 
+
     }
 
     .right-side::before {
