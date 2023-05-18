@@ -3,7 +3,12 @@
   <div class="Home">
     <!-- The title section -->
     <div class="Title">
-      <img class="logo" src="@/assets/img/title.png" alt="">
+      <div class="holder_logo">
+        <img class="logo" src="@/assets/img/title.png" alt="">
+      </div>
+      <div class="holder_menu">
+        <menu_01></menu_01>
+      </div>
     </div>
     <!-- The main body section -->
     <div class="body">
@@ -31,13 +36,17 @@
   import modal from '@/components/modal.vue';
   import info_popup from '@/components/info_popup.vue';
   import socials from '@/components/socials.vue';
+  import menu_01 from '@/components/menu.vue';
+
+
   export default {
     components:{
       tape,
       right_content,
       modal,
       info_popup,
-      socials
+      socials,
+      menu_01
     }
   }
 </script>
@@ -55,6 +64,9 @@
 
     height:10vh;
     background: linear-gradient(to right, #F3F6E8 50%, rgba(25, 60, 53, 0.9) 50%);
+
+    display: flex;
+    justify-content: space-between;
 
     /* Styles for the logo */
     .logo{
@@ -114,6 +126,14 @@
   }
 }
 
+.holder_logo{
+  width: 40%;
+}
+
+.holder_menu{
+  width: 40%;
+}
+
 @media (max-width: 768px) {
   /* Small screens (sm) */
   .Home{
@@ -122,6 +142,12 @@
       background-color: #F3F6E8;
       padding: 10px;
       text-align: center;
+
+      flex-wrap: wrap;
+      height: 10vh;
+      .holder_menu{
+        width: 100%;
+      }
     }
 
     .body {
