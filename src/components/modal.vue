@@ -53,7 +53,7 @@ $seconderyColor: #b6b388;
 
 .modal {
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   left: 0;
   top: 0;
   width: 100%;

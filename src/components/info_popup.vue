@@ -34,7 +34,9 @@
   </script>
   
   <style scoped>
+
   .popup {
+    z-index: 3;
     position: fixed;
     bottom: 20px;
     background-color: #f5f5f5;
