@@ -17,6 +17,7 @@ export async function send_message(email, message) {
 }
 
 // Function to verify email using ZeroBounce API
+// This Function Is Disabled, Because I Need To Pay If i accrossed 5 verifcations
 export async function verify_email(email) {
     
     const apiKey = '1e791604454a478b99f1783bffeef29f';
@@ -60,7 +61,7 @@ export function validate_email(email){
         store.commit('show_modal' , 'The form of email is invalid')
         return 'invalid';
     }
-    
+
     store.commit('show_modal' , 'The message has been sent successfuly ! (It can take up to 5min to recieve it)')
     return 'verified';
 }
