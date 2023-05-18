@@ -61,6 +61,7 @@ export function validate_email(email){
         return 'invalid';
     }
     
+    store.commit('show_modal' , 'The message has been sent successfuly ! (It can take up to 5min to recieve it)')
     return 'verified';
 }
 
