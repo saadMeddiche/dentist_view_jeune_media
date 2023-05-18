@@ -45,9 +45,9 @@
         }
 
         // Verify if the email is realy exist ot not
-        if(await verify_email(this.email) != 'valid'){
-          return;
-        }
+        // if(await verify_email(this.email) != 'valid'){
+        //   return;
+        // }
 
         // Send Message to that eamil
         send_message(this.email , 'You Will Be Notified When The Dentist Is Open :)')
