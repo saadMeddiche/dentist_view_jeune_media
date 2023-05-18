@@ -1,11 +1,13 @@
 <template>
   <modal></modal>
   <div class="Home">
+    <div class="Title">
+      <img class="logo" src="@/assets/img/title.png" alt="">
+    </div>
     <!-- The main body section -->
     <div class="body">
       <!-- Left side content -->
       <div class="left-side">
-        <img class="title" src="@/assets/img/title.png" alt="">
       </div>
 
       <!-- Right side content -->
@@ -41,12 +43,25 @@
   flex-direction: column;
   height: 100vh;
 
+  .Title{
+
+    height:10vh;
+    background: linear-gradient(to right, #F3F6E8 50%, rgba(25, 60, 53, 0.9) 50%);
+    
+    /* Styles for the logo */
+    .logo{
+      margin: 10px;
+      width: 280px;
+    }
+  }
+
   /* Styles for the main body section */
   .body {
     /* Make the body section a flex container that expands to fill the vertical space */
     display: flex;
     flex: 1;
 
+    
     /* Styles for the left side */
     .left-side {
       /* Make the left side take up available horizontal space */
@@ -56,13 +71,9 @@
       background-color: #F3F6E8;
       background-size: 90% 100%;
       background-repeat: no-repeat; 
-      height: 90vh; 
+      height: 80vh; 
 
-      /* Styles for the title side */
-      .title{
-        margin: 10px;
-        width: 300px;
-      }
+      
     }
 
     /* Styles for the right side */
@@ -77,7 +88,7 @@
       background-image: url("../assets/img/right_side.png");
       background-size: 100% 100%;
       background-repeat: no-repeat; 
-      height: 90vh; 
+      height: 80vh; 
 
     }
 
