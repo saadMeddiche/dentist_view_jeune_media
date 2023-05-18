@@ -35,6 +35,7 @@
     width: 100%;
     height: 10vh;
     overflow: hidden;
+    background-color: #F3F6E8;
 
     /* Styling for the tape */
     .tape {

@@ -1,6 +1,7 @@
 <template>
   <modal></modal>
   <div class="Home">
+    <!-- The title section -->
     <div class="Title">
       <img class="logo" src="@/assets/img/title.png" alt="">
     </div>
@@ -35,7 +36,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 /* Styling for the component */
 .Home {
   /* Make the component a flex container with a vertical layout */
@@ -47,7 +48,7 @@
 
     height:10vh;
     background: linear-gradient(to right, #F3F6E8 50%, rgba(25, 60, 53, 0.9) 50%);
-    
+
     /* Styles for the logo */
     .logo{
       margin: 10px;
@@ -104,5 +105,29 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  /* Small screens (sm) */
+  .Home{
+    .Title{
+      background: none;
+      background-color: #F3F6E8;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .body {
+
+      .left-side {
+        display: none;
+
+      }
+    }
+  }
+
+
+  
+}
+
 </style>
 

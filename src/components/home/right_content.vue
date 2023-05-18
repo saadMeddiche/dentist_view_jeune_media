@@ -69,4 +69,23 @@
             color: #FFFFFF;
         }
     }
+
+@media (max-width: 768px) {
+  /* Small screens (sm) */
+  .content{
+
+    
+
+        .big_title{
+            width: 100%;
+        }
+
+        .description{
+            width: 100%;
+        }
+    }
+
+
+  
+}
 </style>
