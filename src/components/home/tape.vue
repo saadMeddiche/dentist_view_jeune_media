@@ -29,6 +29,9 @@
 </template>
 
 <style lang="scss" scoped>
+
+@import url('@/assets/scss/_tape.scss');
+
 /* Styling for the tape container */
 .tape_container {
     position: relative;

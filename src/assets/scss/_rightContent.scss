@@ -1,0 +1,51 @@
+.content{
+    z-index: 1;
+    width: 70%;
+
+    /* Styling for the small title */
+    .small_title{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.1em;
+        color: #B6B388;
+    }
+
+    /* Styling for the big title */
+    .big_title{
+        width: 55%;
+        font-family: 'Philosopher';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 36px;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* Styling for the description */
+    .description{
+        width: 70%;
+        font-style: normal;
+        font-size: 1em;
+        line-height: 16px;
+        color: #FFFFFF;
+    }
+}
+
+@media (max-width: 768px) {
+/* Small screens (sm) */
+.content{
+    width: 80%;
+    
+
+        .big_title{
+            width: 100%;
+        }
+
+        .description{
+            width: 100%;
+        }
+    }
+}

@@ -70,22 +70,19 @@
         }
     }
 
-@media (max-width: 768px) {
-  /* Small screens (sm) */
-  .content{
-    width: 80%;
-    
+    @media (max-width: 768px) {
+    /* Small screens (sm) */
+    .content{
+        width: 80%;
+        
 
-        .big_title{
-            width: 100%;
-        }
+            .big_title{
+                width: 100%;
+            }
 
-        .description{
-            width: 100%;
+            .description{
+                width: 100%;
+            }
         }
     }
-
-
-  
-}
 </style>

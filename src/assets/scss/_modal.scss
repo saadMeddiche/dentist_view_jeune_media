@@ -1,53 +1,3 @@
-<template>
-    <div v-if="showModal" class="modal">
-      <div class="modal-content">
-        <span class="close" @click="close_Modal">&times;</span>
-        <p>{{ modalMessage }}</p>
-      </div>
-    </div>
-</template>
-  
-<script>
-    export default {
-    watch:{
-        modal_status(){
-
-            if(this.$store.state.modal.show == true){
-                this.show_Modal(this.$store.state.modal.message)
-            }
-
-            if(this.$store.state.modal.show == false){
-                this.close_Modal()
-            }
-        }
-    },
-    data() {
-        return {
-            showModal: false,
-            modalMessage: ''
-        };
-    },
-    methods: {
-        show_Modal(message) {
-            this.modalMessage = message;
-            this.showModal = true;
-        },
-        close_Modal() {
-            this.$store.commit('close_modal')
-            this.showModal = false;
-        }
-    },
-    computed:{
-        modal_status(){
-            return this.$store.state.modal.show
-        }
-    }
-    };
-</script>
-  
-<style lang="scss" scoped>
-
-
 $primaryColor: #193c35;
 $seconderyColor: #b6b388;
 
@@ -100,5 +50,3 @@ $seconderyColor: #b6b388;
     }
   }
 }
-</style>
-  
