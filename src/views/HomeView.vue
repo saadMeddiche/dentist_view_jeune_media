@@ -14,6 +14,7 @@
       <!-- Right side content -->
       <div class="right-side">
         <right_content></right_content>
+        <socials></socials>
       </div>
     </div>
 
@@ -29,12 +30,14 @@
   import right_content from '@/components/home/right_content.vue'
   import modal from '@/components/modal.vue';
   import info_popup from '@/components/info_popup.vue';
+  import socials from '@/components/socials.vue';
   export default {
     components:{
       tape,
       right_content,
       modal,
-      info_popup
+      info_popup,
+      socials
     }
   }
 </script>
@@ -83,7 +86,8 @@
 
     /* Styles for the right side */
     .right-side {
-      display: flex;      
+      display: flex;   
+      flex-wrap: wrap;   
       justify-content: center;
       align-items: center;
       position: relative;
