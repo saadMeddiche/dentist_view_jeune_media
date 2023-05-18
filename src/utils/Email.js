@@ -19,14 +19,14 @@ export async function send_message(email, message) {
 // Function to verify email using ZeroBounce API
 export async function verify_email(email) {
     
-    const apiKey = '7beea32664734162add48bc48fcf668b';
+    const apiKey = '1e791604454a478b99f1783bffeef29f';
     const url = `https://api.zerobounce.net/v2/validate?api_key=${apiKey}&email=${encodeURIComponent(email)}`;
     
 
     try {
         const response = await axios.get(url);
         const { status } = response.data;
-        
+        console.log(response.data)
         if (status === 'valid') {
             store.commit('show_modal' , 'The message has been sent successfuly ! (It can take up to 5min to recieve it)')
             return 'valid';
