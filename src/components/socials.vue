@@ -19,12 +19,9 @@
 </script>
 <style lang="scss" scoped>
     .socials{
-        width: 100%;
-        height: 5vh;
-
+        height: 5%;
+        position: relative;
         margin: 10px;
-        margin-right: 40px;
-
         display: flex;
         justify-content: end;
 
@@ -33,12 +30,6 @@
 
         .facebook , .instagram{
             cursor: pointer;
-        }
-    }
-
-    @media (max-width: 768px){
-        .socials{
-            height: 1vh;
         }
     }
 </style>

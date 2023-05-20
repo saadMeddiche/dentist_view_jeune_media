@@ -4,7 +4,7 @@
           <p>Vous souhaitez être tenu(e) au courant de l’ouverture du cabinet?</p>
         </div>
         <div class="input-container">
-          <input type="email" placeholder="Votre adresse mail" v-model="email">
+          <input type="email" placeholder="Votre adresse mail ..." v-model="email">
           <button @click="when_send_button_is_clicked()"> <svg viewBox="0 5 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -54,6 +54,7 @@
 
 
   .Email{
+    width: 100%;
     .description{
       color: white;
       font-size: 14px;
@@ -69,8 +70,10 @@
         border-radius: 25px 25px;
         padding: 20px;
         &::placeholder{
-          font-size: 14px;
+          font-size: 16px;
+          font-weight: bold;
           color: #193C35;
+          padding: 4px;
         }
       }
 
@@ -83,6 +86,7 @@
         border: none;
         border-radius: 50%;
         background-color: #193C35;
+        cursor: pointer;
 
         svg{
           position: absolute;
@@ -96,10 +100,12 @@
 
   @media (max-width: 768px) {
     /* Small screens (sm) */
-    .Email{
+    .Email{ 
+      width: 90%;
     .description{
       color: white;
-      font-size: 4px;
+      font: 6px sans-serif;
+      
     }
     .input-container {
       position: relative;
@@ -112,7 +118,7 @@
         border-radius: 25px 25px;
         padding: 4px;
         &::placeholder{
-          font-size: 10px;
+          font-size: 8px;
           font-weight: bold;
           color: #193C35;
         }

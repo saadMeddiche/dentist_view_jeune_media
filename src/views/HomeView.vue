@@ -14,8 +14,9 @@
 
       <!-- Right side content -->
       <div class="right-side">
-        <!-- <right_content></right_content> -->
-        <!-- <socials></socials> -->
+        <menu_01></menu_01>
+        <right_content></right_content>
+        <socials></socials>
       </div>
     </div>
 
@@ -60,11 +61,14 @@
   .body {
     display: flex;
     flex:1;
+    height: 90%;
     .left-side {
     
       background-image: url("../assets/img/left_side.png");
       background-color: #F3F6E8;
       background-size: cover;
+      background-repeat: no-repeat;
+
 
       width: 50%;
 
@@ -84,6 +88,10 @@
     /* Styles for the right side */
     .right-side {
       position: relative;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
      
       background-image: url("../assets/img/right_side.png");
       background-size: 100% 100%;
@@ -109,8 +117,27 @@
 @media (max-width: 768px) {
   /* Small screens (sm) */
 
+  .Home {
 
-  
+    .body {
+      height: 95%;
+
+      .left-side {
+      
+        background-image: url("../assets/img/left_side.png");
+        background-color: #F3F6E8;
+        background-size: cover;
+        background-position:-100px;
+      }
+
+      /* Styles for the right side */
+      .right-side {
+        background-image: url("../assets/img/right_side.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+      }
+    }
+}
 }
 
 </style>
