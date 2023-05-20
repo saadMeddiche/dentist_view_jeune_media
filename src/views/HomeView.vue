@@ -2,29 +2,27 @@
   <modal></modal>
   <div class="Home">
     <!-- The title section -->
-    <div class="Title">
-      <div class="holder_logo">
-        <img class="logo" src="@/assets/img/title.png" alt="">
-      </div>
-      <div class="holder_menu">
-        <menu_01></menu_01>
-      </div>
-    </div>
+    
     <!-- The main body section -->
     <div class="body">
       <!-- Left side content -->
       <div class="left-side">
+        <div class="holder_logo">
+          <img class="logo" src="@/assets/img/title.png" alt="">
+        </div>
       </div>
 
       <!-- Right side content -->
       <div class="right-side">
-        <right_content></right_content>
-        <socials></socials>
+        <!-- <right_content></right_content> -->
+        <!-- <socials></socials> -->
       </div>
     </div>
 
     <!-- Custom tape component -->
-    <tape></tape>
+    <!-- <div class="tape_holder"> -->
+      <tape></tape>
+    <!-- </div> -->
   </div>
   <info_popup></info_popup>
 </template>
@@ -54,62 +52,44 @@
 <style lang="scss" scoped>
 /* Styling for the component */
 .Home {
-  width: 100vw;
-  /* Make the component a flex container with a vertical layout */
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   height: 100vh;
 
-  .Title{
-
-    height:10vh;
-    background: linear-gradient(to right, #F3F6E8 50%, rgba(25, 60, 53, 0.9) 50%);
-
-    display: flex;
-    justify-content: space-between;
-
-    /* Styles for the logo */
-    .logo{
-      margin: 10px;
-      width: 280px;
-    }
-  }
-
-  /* Styles for the main body section */
   .body {
-    /* Make the body section a flex container that expands to fill the vertical space */
     display: flex;
-    flex: 1;
-
-    
-    /* Styles for the left side */
+    flex:1;
     .left-side {
-      /* Make the left side take up available horizontal space */
-      flex: 1;
-      /* Set a background image for the left side */
+    
       background-image: url("../assets/img/left_side.png");
       background-color: #F3F6E8;
-      background-size: 100% 100%;
-      background-repeat: no-repeat; 
-      height: 82vh; 
+      background-size: cover;
 
+      width: 50%;
+
+      display: flex;
+      justify-content: start;
+
+      .holder_logo{
+        margin-top: 10px;
+        height: 20%;
+        .logo{
+          width: 75%;
+        }
+      }
       
     }
 
     /* Styles for the right side */
     .right-side {
-      display: flex;   
-      flex-wrap: wrap;   
-      justify-content: center;
-      align-items: center;
       position: relative;
-      /* Make the right side take up available horizontal space */
-      flex: 1;
-      /* Set a background image for the right side */
+     
       background-image: url("../assets/img/right_side.png");
       background-size: 100% 100%;
-      background-repeat: no-repeat; 
-      height: 82vh; 
+      background-repeat: no-repeat;
+
+      width: 50%; 
 
     }
 
@@ -121,49 +101,14 @@
       bottom: 0;
       left: 0;
       background: rgba(25, 60, 53, 0.9);
-      z-index: 0; /* Set a lower z-index for the color overlay */
+      z-index: 0; 
     }
   }
-}
-
-.holder_logo{
-  width: 40%;
-}
-
-.holder_menu{
-  width: 40%;
 }
 
 @media (max-width: 768px) {
   /* Small screens (sm) */
-  .Home{
-    .Title{
-      justify-content: space-between;
 
-      .holder_logo{
-        display: flex;
-        justify-content: start;
-        float: left;
-        .logo{
-    
-          width: 9rem;
-        }
-      }
-
-      // .holder_menu{
-      //   display: flex;
-      //   justify-content: end;
-      //   float: right;
-      // }
-    }
-
-    .body{
-      .left-side , .right-side {
-      height: 85vh;
-      }
-    }
-   
-  }
 
   
 }

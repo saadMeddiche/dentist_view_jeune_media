@@ -6,22 +6,26 @@
             
             <!-- First part of the tape -->
             <div class="first_part">
-                <!-- Headline with style_1 -->
                 <div class="circle_1"></div>
-                <h1 class="style_1">Notre site web officiel sera en ligne très bientôt!</h1>
-                <!-- Headline with style_2 -->
+                <div>
+                    <h1 class="style_1">Notre site web officiel sera en ligne très bientôt!</h1>
+                </div>
                 <div class="circle_2"></div>
-                <h1 class="style_2">Ouverture du cabinet Février 2023.</h1>
+                <div>
+                    <h1 class="style_2">Ouverture du cabinet Février 2023.</h1>
+                </div>
             </div>
 
             <!-- Second part of the tape -->
             <div class="second_part">
-                <!-- Headline with style_1 -->
                 <div class="circle_1"></div>
-                <h1 class="style_1">Notre site web officiel sera en ligne très bientôt!</h1>
-                <!-- Headline with style_2 -->
+                <div>
+                    <h1 class="style_1">Notre site web officiel sera en ligne très bientôt!</h1>
+                </div>
                 <div class="circle_2"></div>
-                <h1 class="style_2">Ouverture du cabinet Février 2023.</h1>
+                <div>
+                    <h1 class="style_2">Ouverture du cabinet Février 2023.</h1>
+                </div>
             </div>
 
         </div>
@@ -30,19 +34,19 @@
 
 <style lang="scss" scoped>
 
-@import url('@/assets/scss/_tape.scss');
 
 /* Styling for the tape container */
 .tape_container {
     position: relative;
-    width: 100%;
-    height: 8vh;
+    height: 10%;
     overflow: hidden;
     background-color: #F3F6E8;
 
     /* Styling for the tape */
     .tape {
         display: flex;
+        justify-content: space-around;
+        gap: 10px;
         position: absolute;
 
         /* Animation for text movement */
@@ -51,22 +55,23 @@
 
         width: 200%;
         top: 50%;
-        left: 0;
 
         /* Keyframes for text movement animation */
         @keyframes text_movement {
-            0% { left: 0; }
-            100% { left: -100%; }
+            0% { left: -100%; }
+            100% { left: 0%; }
         }
 
         /* Styling for the first and second of the tape */
         .first_part , .second_part{
+            white-space: nowrap;
             display: flex;
             justify-content: space-around;
             gap: 10px;
             align-items: center;
-            width: 50%;
-            height: 100%;
+            width: 100%;
+
+            font-size: small;
         }
     }
 }
@@ -101,42 +106,22 @@
 @media (max-width: 768px) {
     /* Small screens (sm) */
   
-    .style_1 , .style_2 {
-        font-size: 0.4rem;
-    }
-
-    .circle_1 , .circle_2 {
-        width: 6px;
-        height: 6px;
-    }
-
     .tape_container{
-        height: 5vh;
-    }
-
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    /* Medium screens (md) */
-
-
-    .style_1 , .style_2 {
-        font-size: 2rem;
+        height: 5%;
+        .tape{
+            .first_part , .second_part{
+                 
+                font-size: 5px;
+            }
+    
+        }
     }
 
     .circle_1 , .circle_2 {
-        width: 10px;
-        height: 10px;
+        width: 8px;
+        height: 8px;
     }
-   
 }
 
-@media (min-width: 1025px) {
-    /* Large screens (lg) */
-   
-    .style_1, .style_2 {
-        font-size: 1.8rem;
-    }
 
-}
 </style>
