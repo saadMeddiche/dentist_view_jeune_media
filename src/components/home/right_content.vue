@@ -61,7 +61,7 @@
 
             /* Styling for the small title */
             .small_title{
-                height: 10%;
+                height: 5%;
 
                 overflow: hidden;
 
@@ -72,11 +72,13 @@
                 line-height: 16px;
                 letter-spacing: 0.1em;
                 color: #B6B388;
+                h4{
+                    margin: 0;
+                }
             }
 
             /* Styling for the big title */
             .big_title{
-                height: 10%;
                 overflow: hidden;
                 width: 70%;
                 font: 1em sans-serif;
