@@ -31,8 +31,14 @@
         gap: 30px;
         z-index: 2;
 
-        .facbook , .instagram{
+        .facebook , .instagram{
             cursor: pointer;
+        }
+    }
+
+    @media (max-width: 768px){
+        .socials{
+            height: 1vh;
         }
     }
 </style>

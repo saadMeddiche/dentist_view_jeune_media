@@ -75,12 +75,18 @@
     .content{
         width: 80%;
         
-
+            .small_title{
+                font-size: 5px;
+            }
             .big_title{
                 width: 100%;
+                font-size: 6px;
+                line-height: 20px;
+
             }
 
             .description{
+                font-size: 7px;
                 width: 100%;
             }
         }

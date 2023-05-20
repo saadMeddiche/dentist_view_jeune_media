@@ -83,7 +83,6 @@
     align-items: flex-end;
     justify-content: space-around;
     z-index: 2;
-    // transform: translateX(100%);
     background-color: #B6B388;
     border: 2px solid white;
     border-radius: 5px;
@@ -123,16 +122,25 @@
   @media (max-width: 768px) {
   /* Small screens (sm) */
  
-    .menu-icon{
-        display: none;
-    }
+   
     .menu-items{
-        width: 90%;
+      position: fixed;
+      top: 15%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      width: 80%;
+      li{
+        font-size: 10px;
+      }
     }
 
     .menu-container{
-        justify-content: center;
-        margin: 0;
+      position: relative;
+      top: 40%;
+      justify-content: center;
+      flex-direction:column-reverse;
+      margin: 0;
     }
 
   

@@ -3,11 +3,9 @@
         <div class="description">
           <p>Vous souhaitez être tenu(e) au courant de l’ouverture du cabinet?</p>
         </div>
-          <div class="input_holder">
-              <input type="text" placeholder="Votre adresse mail" v-model="email">
-              <button @click="when_send_button_is_clicked()">
-                  <div>
-                      <svg viewBox="0 5 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="input-container">
+          <input type="email" placeholder="Votre adresse mail" v-model="email">
+          <button @click="when_send_button_is_clicked()"> <svg viewBox="0 5 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                           <g id="SVGRepo_iconCarrier">
@@ -20,11 +18,8 @@
                                   </clipPath>
                               </defs>
                           </g>
-                      </svg>
-
-                  </div>
-              </button>
-          </div>
+                      </svg></button>
+        </div>
     </div>
 </template>
 <script>
@@ -44,11 +39,6 @@
           return;
         }
 
-        // Verify if the email is realy exist ot not
-        // if(await verify_email(this.email) != 'valid'){
-        //   return;
-        // }
-
         // Send Message to that eamil
         send_message(this.email , 'You Will Be Notified When The Dentist Is Open :)')
 
@@ -59,84 +49,94 @@
   }
 </script>
 <style lang="scss" scoped>
-.Email {
-  z-index: 1;
-  .description{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 16px;
-    /* identical to box height */
 
 
-    color: #FFFFFF;
-  }
-  .input_holder {
-    button {
-      padding: 10px;
-      background-color: #f3f6e8;
-      border-radius: 0 25px 25px 0;
-      border: none;
 
-  
-      div {
-        padding: 10px;
-        border-radius: 25px;
-        background-color: rgba(25, 60, 53, 0.9);
-        cursor: pointer;
-        height: 100%;
-        
 
-        svg {
-            top: 50%;
-            right: 50%;
-            bottom: 50%;
-            left: 50%;
-            width: 20px;
-            // height: 20px;
+  .Email{
+    .description{
+      color: white;
+      font-size: 14px;
+    }
+    .input-container {
+      position: relative;
+      // display: inline-block;
 
+      input{
+        width: 80%;
+        height: fit-content;
+        border: none;
+        border-radius: 25px 25px;
+        padding: 20px;
+        &::placeholder{
+          font-size: 14px;
+          color: #193C35;
+        }
+      }
+
+      button {
+        position: absolute;
+        top: 5px;
+        right: 15%;
+        height: 80%;
+        min-width: 40px;
+        border: none;
+        border-radius: 50%;
+        background-color: #193C35;
+
+        svg{
+          position: absolute;
+          top: 35%;
+          right: 18.5%;
+          width: 25px;
         }
       }
     }
+  }
 
-    input {
-      width: 50%;
-      padding: 20px;
-      background-color: #f3f6e8;
-      border-radius: 25px 0 0 25px;
-      border: none;
+  @media (max-width: 768px) {
+    /* Small screens (sm) */
+    .Email{
+    .description{
+      color: white;
+      font-size: 4px;
+    }
+    .input-container {
+      position: relative;
+      display: inline-block;
 
-      &::placeholder {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 16px;
-        color: rgba(25, 60, 53, 0.9);
+      input{
+        width: 100%;
+        height: fit-content;
+        border: none;
+        border-radius: 25px 25px;
+        padding: 4px;
+        &::placeholder{
+          font-size: 10px;
+          font-weight: bold;
+          color: #193C35;
+        }
       }
 
+      button {
+        position: absolute;
+        top: 3px;
+        right: 0;
+        height: 80%;
+        min-width: 20px;
+        border: none;
+        border-radius: 50%;
+        background-color: #193C35;
+
+        svg{
+          position: absolute;
+          top: 35%;
+          right: 25%;
+          width: 10px;
+        }
+      }
     }
   }
-}
-
-@media (max-width: 768px) {
-  /* Small screens (sm) */
-  .Email {
-    width: 100%;
-  .description{
-    width: 100%;
-  }
-  .input_holder {
-   
-    input {
-      width: 60%;
-      
-    }
-  }
-}
-
-  
 }
 </style>
 

@@ -89,7 +89,7 @@
       /* Set a background image for the left side */
       background-image: url("../assets/img/left_side.png");
       background-color: #F3F6E8;
-      background-size: 90% 100%;
+      background-size: 100% 100%;
       background-repeat: no-repeat; 
       height: 82vh; 
 
@@ -138,27 +138,32 @@
   /* Small screens (sm) */
   .Home{
     .Title{
-      background: none;
-      background-color: #F3F6E8;
-      padding: 10px;
-      text-align: center;
+      justify-content: space-between;
 
-      flex-wrap: wrap;
-      height: 10vh;
-      .holder_menu{
-        width: 100%;
+      .holder_logo{
+        display: flex;
+        justify-content: start;
+        float: left;
+        .logo{
+    
+          width: 9rem;
+        }
       }
+
+      // .holder_menu{
+      //   display: flex;
+      //   justify-content: end;
+      //   float: right;
+      // }
     }
 
-    .body {
-
-      .left-side {
-        display: none;
-
+    .body{
+      .left-side , .right-side {
+      height: 85vh;
       }
     }
+   
   }
-
 
   
 }
