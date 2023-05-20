@@ -69,6 +69,12 @@
         border: none;
         border-radius: 25px 25px;
         padding: 20px;
+
+        color: #193C35;
+        font-size: 16px;
+        font-weight: bold;
+
+
         &::placeholder{
           font-size: 16px;
           font-weight: bold;
@@ -109,14 +115,15 @@
     }
     .input-container {
       position: relative;
-      display: inline-block;
 
       input{
         width: 100%;
         height: fit-content;
         border: none;
         border-radius: 25px 25px;
-        padding: 4px;
+        padding: 6px;
+        font-size: 8px;
+
         &::placeholder{
           font-size: 8px;
           font-weight: bold;

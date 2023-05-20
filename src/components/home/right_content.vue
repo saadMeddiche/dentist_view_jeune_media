@@ -53,10 +53,17 @@
 
         .content{
             width: 90%;
-            height: fit-content;
+            height: 90%;
+
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
 
             /* Styling for the small title */
             .small_title{
+                height: 10%;
+
+                overflow: hidden;
 
                 font-family: 'Montserrat';
                 font-style: normal;
@@ -69,6 +76,8 @@
 
             /* Styling for the big title */
             .big_title{
+                height: 10%;
+                overflow: hidden;
                 width: 70%;
                 font: 1em sans-serif;
                 font-size: 12px;
@@ -78,6 +87,7 @@
 
             /* Styling for the description */
             .description{
+                max-height: 50%;
                 width: 80%;
                 overflow: hidden;
                 font: 1em sans-serif;
@@ -108,7 +118,7 @@
             /* Styling for the big title */
             .big_title{
                 width: 100%;
-                line-height: 15px;
+                line-height: 16px;
                 font-size: 8px;
                 font-weight: 900;
 

@@ -21,7 +21,7 @@
   export default {
     data() {
       return {
-        showMenu: true,
+        showMenu: false,
         menuItems: [
           { id: 1, label: "Accueil", route: "/accueil" },
           { id: 2, label: "Contactez-nous", route: "/contact" },
@@ -46,21 +46,27 @@
     width: 100%;
 
     display: flex;
-    flex-direction: row-reverse;    justify-content: end;
+    justify-content: end;
     
-   
     gap: 20px;
 
     position: relative;
     z-index: 4;
 
     .menu{
-      float: right;
+      margin-top: 10px;
+
+      width: 100%;
+      height: 40%;
+
+      display: flex;
+      justify-content: space-around;
+
+
       .show-menu {
-      // transform: translateX(0%);
-        opacity: 1;
-        pointer-events: all;
-        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+        transform: translateX(-50%) !important;
       }
       .menu-icon {
         width: 30px;
@@ -91,17 +97,20 @@
       
     .menu-items {
       width: 70%;
+      height: fit-content;
       padding: 5px;
       list-style: none;
-      display: none;
-      align-items: flex-end;
+      display: flex;
+    
       justify-content: space-around;
       background-color: #B6B388;
       border: 2px solid white;
       border-radius: 5px;
-      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-      opacity: 1;
-      pointer-events: none;
+    
+      opacity: 0;
+      transform: translateY(-100%);
+      transition: opacity 1s, transform 1s;
+      
 
       li {
           color: white;
@@ -140,6 +149,12 @@
   @media (max-width: 768px) {
   /* Small screens (sm) */
  
+  .menu_holder{
+    .menu{
+      justify-content: end;
+    }
+  }
+ 
    
     .menu-items{
       position: fixed;
@@ -153,14 +168,7 @@
       }
     }
 
-    .menu-container{
-      position: relative;
-      top: 40%;
-      justify-content: center;
-      flex-direction:column-reverse;
-      margin: 0;
-    }
-
+  
   
     }
   </style>
